@@ -66,6 +66,9 @@ void Continue(Task _)
 async Task Consume(NetworkStream stream)
 {
     var extension = GetExtension(stream);
+    if (Directory.Exists(parsedArguments.FilePathSave) is false)
+        Directory.CreateDirectory(parsedArguments.FilePathSave);
+
     var filePath = $"{parsedArguments.FilePathSave}{DateTime.Now:O}.{extension}";
     await using var fileStream = File.Create(filePath);
 

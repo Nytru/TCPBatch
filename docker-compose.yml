@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  my-ubuntu-container:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
