@@ -3,10 +3,10 @@
 script_name=$0 #присваиваем переменной script_name значение имени скрипта
 publish_path=$1
 file_path=$2
-rm -r "$publish_path"/TCP
+rm -r -f "$publish_path"/TCP
 
-rm "$publish_path"/run_server.sh
-rm "$publish_path"/run_client.sh
+rm -f "$publish_path"/run_server.sh
+rm -f "$publish_path"/run_client.sh
 
 if [[ -z "$file_path" ]]; then
     dotnet publish ./TCPServer -o "$publish_path"/TCP/TCPServer
