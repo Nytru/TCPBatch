@@ -7,4 +7,4 @@ how to run:
 - run server script `./run_server.sh --port 8080 --max-threads 150 --size 1000000 --path ./`
 - attach new terminal to container `docker attach {container_id}`
 - go to solution folder `cd TCP`
-- run sender script `./run_client.sh log.txt 127.0.0.1:8080`
+- run sender script `./run_client.sh run_client.sh 127.0.0.1:8080`
